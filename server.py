@@ -39,7 +39,7 @@ def auth_service():
         session['UserId'] = UserId
         userData = userManager.getDetails(UserId)
         session['role'] = userData[2]
-        return redirect(url_for('homepage'))     
+        return redirect(url_for('index'))     
     else:   
         return redirect(url_for('login'))
 @app.route('/auth/signup/<signup_key>')

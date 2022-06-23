@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <head>
-    <html lang = "en">
-      <link rel="shortcut icon" href="{{ url_for('static', filename= 'favicon.png')}}" />
-    <title>Logout·HousePoints</title>
+    <title>ACCESS:DENIED·HousePoints/title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-</head><body>
+</head>
+ <body>
   <header>
     <nav>
       <ul>
-        <li><a href="/">Home</a></li>
+        <li><u>Home</u></li>
         {% if 'UserId' in session %} 
         <li><a href="/profile">Profile</a></li>
         <li><a href="/HousePoints/Manage">Manage</a></li>
+        <li><a href="/help">Help</a></li>
         <li><a href="/auth/logout">Logout</a></li>
         {% else %}
         <li><a href="/auth/login">Login</a></li>
@@ -19,7 +19,9 @@
       </ul>
     </nav>
 </header>
-    <h5>You have now successfully logged out from HousePoints</h5>
-    Bye
-</body>
-</html>
+    <style>
+        h2 {color: red}
+        body{color: black;}
+    </style>
+    <body>
+        <h2> ACCESS DENIED </h2>
