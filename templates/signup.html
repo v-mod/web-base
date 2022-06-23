@@ -3,7 +3,7 @@
 <head>
 <html lang = "en">
 <link rel="shortcut icon" href="{{ url_for('static', filename= 'favicon.png')}}" />
-<title>Signup·HousePoints</title>
+<title>Signup·Web Base</title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -81,7 +81,6 @@ span.psw {
         <li><a href="/">Home</a></li>
         {% if 'UserId' in session %} 
         <li><a href="/profile">Profile</a></li>
-        <li><a href="/HousePoints/Manage">Manage</a></li>
         <li><a href="/auth/logout">Logout</a></li>
         {% else %}
         <li><a href="/auth/login">Login</a></li>

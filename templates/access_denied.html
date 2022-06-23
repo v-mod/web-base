@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>ACCESS:DENIED·HousePoints/title>
+    <title>ACCESS:DENIED·Web Base/title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
  <body>
@@ -10,8 +10,6 @@
         <li><u>Home</u></li>
         {% if 'UserId' in session %} 
         <li><a href="/profile">Profile</a></li>
-        <li><a href="/HousePoints/Manage">Manage</a></li>
-        <li><a href="/help">Help</a></li>
         <li><a href="/auth/logout">Logout</a></li>
         {% else %}
         <li><a href="/auth/login">Login</a></li>

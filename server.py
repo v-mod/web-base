@@ -11,12 +11,18 @@ userManager = UM.UserManager()
 userInfo = None
 userName = None
 
-
+# Index
 @app.route('/')
 def index():
-    return 'Hello World!'
+    if 'UserId' in session:
+        userId = session['UserId']
+        return render_template('home.html', userId=userId)
+    else:
+        userId= ''
+        return render_template('home.html', userId=userId)
 
-    # Login/Logout/Signup/Profiles
+
+# Login/Logout/Signup/Profiles
 @app.route('/login')
 @app.route('/auth/login')
 def login():
