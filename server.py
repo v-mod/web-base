@@ -1,5 +1,5 @@
 # Importing flask and neccesary items
-from flask import Flask, session, redirect, render_template
+from flask import Flask, session, redirect, render_template, request, url_for
 import UserManager as UM
 # Constructing app
 app = Flask(__name__)
@@ -48,15 +48,9 @@ def auth_service():
         return redirect(url_for('index'))     
     else:   
         return redirect(url_for('login'))
-@app.route('/auth/signup/<signup_key>')
-def signup(signup_key):
-    keys=open(r'User-Info/signup_keys.keys', 'r')
-    signup_keys=keys.read()
-    keys.close()
-    if signup_key in signup_keys:
-        return render_template('signup.html')
-    else:
-        return render_template('access_denied.html')
+@app.route('/auth/signup')
+def signup():
+    return render_template('signup.html')
 @app.route('/service/signup', methods=['POST'])
 def signup_service():
     userName=request.form['userName']

@@ -76,7 +76,6 @@ span.psw {
 </head>
 <body>
   <header>
-    <nav>
       <ul>
         <li><a href="/">Home</a></li>
         {% if 'UserId' in session %} 
@@ -84,14 +83,14 @@ span.psw {
         <li><a href="/auth/logout">Logout</a></li>
         {% else %}
         <li><a href="/auth/login">Login</a></li>
+        <li><a class="active" href="/auth/signup">Signup</a></li>
         {% endif %}
       </ul>
-    </nav>
 </header>
 <form action="/service/auth" method="POST">
   <div class="imgcontainer">
-      <h2>Signup.</h2>
-    <img src="https://i.ibb.co/S0fQzWZ/img-avatar2.png" alt="img-avatar2" class="avatar">
+      <h2>Signup</h2>
+    <img src="/static/img_avatar2.png" alt="img-avatar2" class="avatar">
   </div>
 
   <div class="container">

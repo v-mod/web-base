@@ -76,17 +76,16 @@ span.psw {
 </head>
 <body>
   <header>
-    <nav>
       <ul>
         <li><a href="/">Home</a></li>
         {% if 'UserId' in session %} 
-        <li><a href="/profile">Profile</a></li>
+        <li><a class="active" href="/profile">Profile</a></li>
         <li><a href="/auth/logout">Logout</a></li>
         {% else %}
         <li><u><a href="/auth/login">Login</a></u></li>
+        <li><a href="/auth/signup">Signup</a></li>
         {% endif %}
       </ul>
-    </nav>
 </header>
 <form action="/service/auth/password" method="POST">
   <div class="imgcontainer">

@@ -22,32 +22,32 @@ body {
 .but1 {background-color: goldenrod;
     color: turquoise;
 }
-nav ul {
-    background-color: tomato;
-    border-style: solid;
-    border-color: MediumVioletRed;
-    border-width: 2px;
-    padding: 10px;
-  }
-nav ul li {
+
+ul {
     list-style-type: none;
-    display: inline;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: PapayaWhip;
-}
-nav ul li a {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-}
-@media all and (min-width: 1000px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
-@media all and (min-width: 1600px) {
-    nav ul {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-}
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }

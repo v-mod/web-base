@@ -6,19 +6,18 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head><body>
   <header>
-    <nav>
       <ul>
         <li><a href="/">Home</a></li>
         {% if 'UserId' in session %} 
         <li><a href="/profile">Profile</a></li>
-        <li><a href="/auth/logout">Logout</a></li>
+        <li><a class="active" href="/auth/logout">Logout</a></li>
         {% else %}
         <li><a href="/auth/login">Login</a></li>
+        <li><a href="/auth/signup">Signup</a></li>
         {% endif %}
       </ul>
-    </nav>
 </header>
-    <h5>You have now successfully logged out from HousePoints</h5>
+    <h5>You have now successfully logged out from Web Base</h5>
     Bye
 </body>
 </html>

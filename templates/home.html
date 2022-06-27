@@ -142,17 +142,16 @@ span.psw {
 </head>
  <body>
   <header>
-    <nav>
       <ul>
-        <li><u>Home</u></li>
+        <li><a class="active" href="/">Home</a></li>
         {% if 'UserId' in session %} 
         <li><a href="/profile">Profile</a></li>
         <li><a href="/auth/logout">Logout</a></li>
         {% else %}
         <li><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></li>
+        <li><a href="/auth/signup">Signup</a></li>
         {% endif %}
       </ul>
-    </nav>
 </header>
         <div class="main">
             <h3>Hi, {{ userId }} and welcome to Web Base</h3>             

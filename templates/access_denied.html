@@ -5,17 +5,16 @@
 </head>
  <body>
   <header>
-    <nav>
       <ul>
-        <li><u>Home</u></li>
+        <li><a href="/">Home</a></li>
         {% if 'UserId' in session %} 
         <li><a href="/profile">Profile</a></li>
         <li><a href="/auth/logout">Logout</a></li>
         {% else %}
         <li><a href="/auth/login">Login</a></li>
+        <li><a href="/auth/signup">Signup</a></li>
         {% endif %}
       </ul>
-    </nav>
 </header>
     <style>
         h2 {color: red}
